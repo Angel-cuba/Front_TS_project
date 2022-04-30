@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { ThemeManager } from '../Context/Context';
+import '../Styles/Components/Navbar.scss';
 
 const Navbar = () => {
-  return <div>Navbar</div>
-}
+  const { theme } = useContext(ThemeManager);
+  console.log('theme from Navbar : ', theme);
+  return <div className="navbar">Navbar</div>;
+};
 
-export default Navbar
+export default Navbar;
