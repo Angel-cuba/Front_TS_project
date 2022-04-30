@@ -7,15 +7,11 @@ const ThemeToggle = (): JSX.Element => {
   console.log('theme from ThemeToggle : ', theme);
 
   const handleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   return (
-    <div className="outSide" onClick={handleTheme}>
+    <div className={theme === 'light' ? 'outSide-light' : 'outSide'} onClick={handleTheme}>
       <FaMoon className="moon" />
       <FaSun className="sun" />
       <div className={theme === 'light' ? 'inside' : 'insideMove'}></div>

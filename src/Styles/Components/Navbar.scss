@@ -24,13 +24,13 @@
       position: relative;
       width: 70px;
       height: 30px;
-      background-color: rgb(41, 40, 40);
+      background-color: rgb(10, 9, 9);
       border-radius: 20px;
       .moon {
         position: absolute;
         left: 2px;
         font-size: 30px;
-        color: #fff;
+        color: rgb(255, 255, 255);
         top: 0;
         z-index: 1;
       }
@@ -38,13 +38,68 @@
         position: absolute;
         right: 2px;
         font-size: 30px;
-        color: #fff;
+        color: rgb(242, 255, 0);
+        box-shadow: 0 0 10px rgba(245, 255, 4, 0.795);
+        border-radius: 50%;
         z-index: 1;
       }
       .inside {
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: -2px;
+        width: 35px;
+        height: 35px;
+        background-color: rgb(0, 5, 6);
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(5, 5, 5, 0.795);
+        transition: all 1s;
+        z-index: 100;
+      }
+      .insideMove {
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        width: 35px;
+        height: 35px;
+        background-color: rgb(242, 255, 0);
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.795);
+        transition: all 1s;
+        z-index: 100;
+      }
+    }
+    .outSide-light {
+      position: relative;
+      width: 70px;
+      height: 30px;
+      background-color: rgb(47, 52, 3);
+      border-radius: 20px;
+
+      .moon {
+        position: absolute;
+        left: 2px;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        top: 0;
+        z-index: 1;
+      }
+      .sun {
+        position: absolute;
+        right: 2px;
+        font-size: 30px;
+        color: rgb(242, 255, 0);
+        box-shadow: 0 0 5px 2px rgba(245, 255, 4, 0.3795);
+        // filter: drop-shadow(
+        //   -3px -3px 2px rgba(245, 255, 4, 0.795) drop-shadow(5px 5px 5px rgba(245, 255, 4, 0.795))
+        //     drop-shadow(13px 13px 15px rgba(245, 255, 4, 0.795))
+        // );
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .inside {
+        position: absolute;
+        left: 0;
+        bottom: -2px;
         width: 35px;
         height: 35px;
         background-color: rgb(0, 5, 6);
@@ -56,7 +111,7 @@
       .insideMove {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -2px;
         width: 35px;
         height: 35px;
         background-color: rgb(0, 5, 6);
