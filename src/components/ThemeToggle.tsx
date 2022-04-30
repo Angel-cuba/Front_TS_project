@@ -4,7 +4,6 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 
 const ThemeToggle = (): JSX.Element => {
   const { theme, setTheme } = useContext(ThemeManager);
-  console.log('theme from ThemeToggle : ', theme);
 
   const handleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');

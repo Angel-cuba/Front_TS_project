@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import { ThemeManager } from '../Context/Context';
 
+import '../Styles/App.scss';
+
 export default function Home() {
   const { theme } = useContext(ThemeManager);
-  console.log('theme is : ', theme);
+
   return (
-    <>
+    <div className={theme === 'light' ? 'Principal' : 'Principal-Dark'}>
       <Navbar />
       <h1>Home page</h1>
-    </>
+    </div>
   );
 }
