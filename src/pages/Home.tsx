@@ -5,7 +5,7 @@ import { ThemeManager } from '../Context/Context';
 
 import '../Styles/App.scss';
 
-export default function Home() {
+const Home = () => {
   const { theme } = useContext(ThemeManager);
   const [value, setValue] = useState<string>('');
   console.log(value);
@@ -21,4 +21,6 @@ export default function Home() {
       <h1>Home page</h1>
     </div>
   );
-}
+};
+
+export default Home;
