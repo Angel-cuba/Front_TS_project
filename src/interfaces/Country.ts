@@ -1,10 +1,5 @@
 import { CountryCurrencies, CountryName } from '../types/CountryTypes';
 
-export interface HomeProps {
-  data?: CountriesData[];
-  handleSearch?: (value: string) => void;
-  searchedCountries?: CountriesData[];
-}
 export interface CountriesData {
   name: CountryName;
   c2: string;
