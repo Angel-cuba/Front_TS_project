@@ -7,13 +7,12 @@ interface Fetch {
   countries?: CountriesData[];
 }
 
-export default (state: Fetch = { isLoading: true, countries: [] }, action: any) => {
+export default (state = { isLoading: true, countries: [] }, action: any) => {
   switch (action.type) {
     case FETCH_ALL:
       return {
         ...state,
         countries: action.payload,
-        isLoading: false,
       };
     case START_LOADING:
       return {

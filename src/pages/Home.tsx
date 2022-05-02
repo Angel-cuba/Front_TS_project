@@ -1,19 +1,30 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
 import { Input } from '../components/Input';
 import Navbar from '../components/Navbar';
 import { ThemeManager } from '../Context/Context';
+import { CountriesData } from '../interfaces/Country';
 
 import '../Styles/App.scss';
+type State = {
+  state: CountriesData[];
+};
 
 const Home = () => {
   const { theme } = useContext(ThemeManager);
   const [value, setValue] = useState<string>('');
-  console.log(value);
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   //Redux
-  useSelector((state: any) => console.log(state));
+  useSelector((state) => {
+    console.log(state);
+  });
+
+  // useEffect(() => {
+  //   console.log(fetchAll());
+  // });
 
   const handleValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
